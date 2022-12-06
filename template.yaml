@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  haominglambdaparquettest:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.9
+      CodeUri: .
+      Description: ''
+      MemorySize: 256
+      Timeout: 180
+      Role: 'arn:aws:iam::963414178352:role/haoming-lambda-parquet-test-role'
+      Environment:
+        Variables:
+          BACKUP_DIR: tmp_backup
+          LANDING_BUCKET: haoming-convert-to-parquet-test
+          LAND_DIR: haoming-parquet/
+          PREFIX: haoming-test-folder/
+          TZ: UTC
+      Layers:
+        - 'arn:aws:lambda:us-west-2:336392948345:layer:AWSSDKPandas-Python39:1'

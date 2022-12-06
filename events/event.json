@@ -1,0 +1,21 @@
+{
+  "Records": [
+    {"eventVersion": "2.1",
+      "eventSource": "aws:s3",
+      "awsRegion": "us-west-2",
+      "eventTime": "2022-12-05T05:31:48.839Z",
+      "eventName": "ObjectCreated:Put",
+      "userIdentity": {"principalId": "AWS:AIDA6AT7VXIYOVAHHWRTW"},
+      "requestParameters": {"sourceIPAddress": "127.0.0.1"},
+      "s3": {
+        "s3SchemaVersion": "1.0",
+        "configurationId": "76a907d1-e37b-4f63-b4e3-d1413448e1f6",
+        "bucket": {
+          "name": "haoming-test-bucket",
+          "ownerIdentity": {"principalId": "A3GMAD1EG3P6E"},
+          "arn": "arn:aws:s3:::haoming-test-bucket"},
+        "object": {
+          "key": "haoming-test-folder/canserver_2022-10-04_10-28-14_F_0034-001.log",
+          "size": 2604223,
+          "eTag": "f5546a4af158999f61b586659a0e7dbc",
+          "sequencer": "00638D82430AF77029"}}}]}
